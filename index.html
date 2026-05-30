@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MAXFiber | Fibra Óptica</title>
+<title>MAXIFiber | Fibra Óptica</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -442,7 +442,10 @@ target="_blank">
 
 <script>
 
-const map = L.map('coverage-map').setView([-11.8585,-77.1260],14);
+const map = L.map('coverage-map').setView(
+[-11.879507789136133, -77.10172232481435],
+16
+);
 
 L.tileLayer(
 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -452,21 +455,22 @@ maxZoom:19
 }
 ).addTo(map);
 
-L.marker([-11.8565,-77.1230])
+L.marker([
+-11.879507789136133,
+-77.10172232481435
+])
 .addTo(map)
-.bindPopup('<b>MAXIFiber</b><br>Ventanilla Alta');
-
-L.marker([-11.8625,-77.1290])
-.addTo(map)
-.bindPopup('<b>MAXIFiber</b><br>Comercial Villamoto');
+.bindPopup(
+'<b>MAXIFiber</b><br>Parque Lolo - Ventanilla Alta'
+);
 
 L.circle(
-[-11.8585,-77.1260],
+[-11.879507789136133, -77.10172232481435],
 {
-color:'#2563eb',
-fillColor:'#3b82f6',
-fillOpacity:0.2,
-radius:1200
+color:'#7c3aed',
+fillColor:'#8b5cf6',
+fillOpacity:0.25,
+radius:800
 }
 ).addTo(map);
 
